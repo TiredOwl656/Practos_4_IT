@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Главный экран</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        <link rel="stylesheet" href="/CSS/main.css">
+    </head>
+    <body>
+        <header>
+            <h1><b>События</b></h1>
+            <div class="filters">
+                <select id="categoryFilter">
+                    <option value="all">Все категории</option>
+                    <option value="personal">Личные</option>
+                    <option value="work">Рабочие</option>
+                    <option value="public">Общественные</option>
+                </select>
+                <select id="dateSort">
+                    <option value="newest">Сначала новые</option>
+                    <option value="oldest">Сначала старые</option>
+                </select>
+            </div>
+        </header>
+
+        <div class="events-container" id="eventsContainer">
+        </div>
+
+        <div class="add-button">
+            <a href="/HTML/add.html" class="add-btn"><b>+</b></a>
+        </div>
+
+        <script src="/JS/main.js"></script>
+    </body>
+</html>
