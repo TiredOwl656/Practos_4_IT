@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('eventForm');
     
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
+    form.addEventListener('submit', function(page) {
+        page.preventDefault();
         
         const event = {
             id: Date.now().toString(),
