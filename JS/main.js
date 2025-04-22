@@ -140,6 +140,10 @@ function animateCardsReordering(filteredEvents) {
                     card.style.transform = 'translate(0, 0)';
                     card.style.opacity = '1';
                 });
+
+                setTimeout(() => {
+                    card.style.transform = '';
+                }, 500);
             } else {
                 card.style.transition = 'opacity 0.5s ease';
                 card.style.opacity = '1';
