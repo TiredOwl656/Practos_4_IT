@@ -2,13 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Courier New', monospace;
     text-decoration: none;
 }
 
 body {
     padding: 20px;
-    background-color: #f5f5f5;
+    background-color: #FFFFFF;
 }
 
 header {
@@ -17,13 +17,24 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    border-bottom: 3px solid #000;
+    padding-bottom: 10px;
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .filters select {
     padding: 8px 12px;
     margin-left: 10px;
-    border-radius: 4px;
-    border: 1px solid #ddd;
+    border: 3px solid #000;
+    background-color: #FFFF00;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .events-container {
@@ -34,55 +45,58 @@ header {
 }
 
 .event-card {
-    background-color: white;
-    border-radius: 8px;
+    background-color: #FFFFFF;
+    border: 3px solid #000;
     padding: 15px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    transition: transform 0.5s ease, opacity 0.5s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .event-card:hover {
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transform: translate(-5px, -5px);
+    box-shadow: 8px 8px 0 #000;
 }
 
 .event-card h3 {
-    color: #333;
+    color: #000;
     margin-bottom: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
 }
 
 .event-card .date {
-    color: #666;
+    color: #000;
     font-size: 14px;
     margin-bottom: 8px;
+    font-weight: bold;
 }
 
 .event-card .category {
     display: inline-block;
     padding: 3px 8px;
-    border-radius: 4px;
+    border: 2px solid #000;
     font-size: 12px;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .category.personal {
-    background-color: #ffebee;
-    color: #c62828;
+    background-color: #FF0000;
+    color: #000;
 }
 
 .category.work {
-    background-color: #e3f2fd;
-    color: #1565c0;
+    background-color: #0000FF;
+    color: #000;
 }
 
 .category.public {
-    background-color: #e8f5e9;
-    color: #2e7d32;
+    background-color: #00FF00;
+    color: #000;
 }
 
 .event-card .description {
-    color: #444;
+    color: #000;
     font-size: 14px;
     line-height: 1.4;
 }
@@ -91,6 +105,7 @@ header {
     position: fixed;
     bottom: 30px;
     right: 30px;
+    z-index: 10;
 }
 
 .add-btn {
@@ -99,22 +114,25 @@ header {
     justify-content: center;
     width: 60px;
     height: 60px;
-    border-radius: 50%;
-    background-color: #3b6fe9;
-    color: white;
+    border-radius: 0;
+    background-color: #000;
+    color: #FFFF00;
     font-size: 30px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    border: 3px solid #000;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
 
 .add-btn:hover {
-    background-color: #2a56c7;
-    transform: scale(1.1);
+    background-color: #FFFF00;
+    color: #000;
 }
 
 .no-events {
     text-align: center;
-    color: #666;
+    color: #000;
     grid-column: 1 / -1;
     padding: 20px;
+    font-weight: bold;
+    font-size: 18px;
 }
